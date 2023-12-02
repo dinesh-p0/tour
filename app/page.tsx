@@ -7,6 +7,7 @@ const page = () => {
   return (
     <div>
       <Home/>
+      
       <Explore/>
       <Guide/>
       <Testimonals/>
