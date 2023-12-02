@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Testimonalcard = ({content,name,imgadd}) => {
+const Testimonalcard = (props: { content: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; imgadd: string | undefined; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined }) => {
   return (
     <div className=''>
         <div className="relative mx-auto mt-8 flex max-w-sm flex-col justify-between rounded-lg bg-gray-100 p-10 leading-snug text-gray-700 shadow-xl">
@@ -21,7 +21,7 @@ const Testimonalcard = ({content,name,imgadd}) => {
             </svg>
           </div>
           <div className="mt-2">
-            {content}
+            {props.content}
           </div>
           <div>
             <div className="mx-auto my-8 w-full border border-gray-300"></div>
@@ -29,11 +29,11 @@ const Testimonalcard = ({content,name,imgadd}) => {
               <div>
                 <img
                   className="h-12 w-12 rounded-full "
-                  src={imgadd}
+                  src={props.imgadd}
                 />
               </div>
               <div className="ml-4">
-                <div className="font-bold">{name}</div>
+                <div className="font-bold">{props.name}</div>
               </div>
             </div>
           </div>
